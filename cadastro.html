@@ -6,198 +6,113 @@
   <title>Cadastro - Fireleaf</title>
   <link rel="stylesheet" href="cadastro1.0.css">
   <style>
-    .link-login {
-      text-align: center;
-      margin-top: 10px;
-    }
-     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
+  body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(160deg, #fff, #f5f5f5 50%, #ff8c42 50%);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-    body {
-      background: linear-gradient(160deg, #fff, #f5f5f5 50%, #ff8c42 50%);
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
 
-    .container {
-      background-color: #ffffff;
-      width: 330px;
-      border-radius: 20px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-      padding: 40px 30px;
-      position: relative;
-      overflow: hidden;
-    }
+.logo {
+  display: block;
+  width: 100px;
+  margin: 30px auto 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
 
-    .logo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+main {
+  text-align: center;
+}
 
-    .logo img {
-      width: 42px;
-    }
+h1 {
+  color: #ff8c42;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
 
-    .logo h1 {
-      font-size: 20px;
-      color: #333;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-top: 8px;
-    }
+section {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .login-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+form {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-    .input-group {
-      position: relative;
-    }
+fieldset {
+  border: 2px solid #ff8c42;
+  border-radius: 10px;
+  padding: 20px;
+}
 
-    .input-group input {
-      width: 100%;
-      padding: 12px 40px 12px 15px;
-      border-radius: 25px;
-      border: 1.5px solid #bdbdbd;
-      outline: none;
-      font-size: 14px;
-      color: #333;
-      transition: 0.3s;
-      background-color: #fafafa;
-    }
+legend {
+  color: #ff8c42;
+  font-weight: bold;
+  padding: 0 10px;
+}
 
-    .input-group input:focus {
-      border-color: #ff8b3d;
-      box-shadow: 0 0 4px rgba(255,139,61,0.4);
-    }
+label {
+  font-weight: 500;
+}
 
-    .input-group i {
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #a8a8a8;
-      font-size: 15px;
-    }
+input, select {
+  width: 95%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
 
-    .forgot {
-      text-align: center;
-      display: block;
-      margin: 5px 0 15px;
-      color: #b3b3b3;
-      font-size: 12px;
-      text-decoration: none;
-    }
+button {
+  background-color: #ff8c42;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
 
-    .forgot:hover {
-      color: #ff8b3d;
-    }
+button:hover {
+  background-color: #e67c31;
+}
 
-    .login-btn {
-      background: #ff8b3d;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      padding: 12px;
-      font-size: 15px;
-      cursor: pointer;
-      transition: 0.3s;
-      font-weight: 500;
-    }
+.link {
+  color: #ff8c42;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .login-btn:hover {
-      background: #ff9b50;
-    }
+.link:hover {
+  text-decoration: underline;
+}
 
-    .message {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 13px;
-      color: #ff8b3d;
-      display: none;
-    }
-
-    .social-login {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .social-btn {
-      border: none;
-      border-radius: 25px;
-      padding: 10px;
-      font-size: 14px;
-      cursor: pointer;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: 0.3s;
-    }
-
-    .google-btn {
-      background-color: #ffffff;
-      border: 1px solid #dcdcdc;
-      color: #444;
-    }
-
-    .google-btn:hover {
-      background-color: #f0f0f0;
-    }
-
-    .google-btn i {
-      background: linear-gradient(45deg, #4285F4 0%, #DB4437 25%, #F4B400 50%, #0F9D58 75%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      font-size: 18px;
-    }
-
-    .facebook-btn {
-      background-color: #1877f2;
-      color: #ffffff;
-    }
-
-    .facebook-btn:hover {
-      background-color: #3b86f9;
-    }
-
-    .corner {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 75px;
-      height: 75px;
-      background: linear-gradient(135deg, #ffffff00 50%, #2c2825 50%);
-      border-bottom-right-radius: 20px;
-    }
-
-    @media (max-width: 400px) {
-      .container {
-        width: 90%;
-        padding: 30px 0px;
-      }
-    }
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+  }
+  .logo {
+    width: 80px;
+  }
+}
   </style>
 </head>
 <body>
 
   <div class="logo">  
-      <img src="boivermei.png" alt="Logo FireLeaf">
+      <img src="bodivermei.png" alt="Logo FireLeaf" width="100px">
     </div>
 
   <main>
@@ -244,4 +159,16 @@
 </html>
 
 
-
+login1.html
+Exibindo login1.html…
+Situação de Aprendizagem - Desenvolvimento Client Side
+CARLOS GUILHERME MIRANDA FINELLI
+•
+30 de out. (editado: 30 de out.)
+40 pontos
+Data de entrega: 6 de nov.
+Os grupos devem ser fornecidos no máximo até segunda feira, sendo informados ao instrutor.
+Link da API que será utilizada: https://pokeapi.co/docs/v2
+Situação de Aprendizagem - Desenvolvimento Client Side.pdf
+PDF
+Comentários da turma

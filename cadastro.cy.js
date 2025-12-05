@@ -1,6 +1,6 @@
 describe('Testes da Página de Cadastro FireLeaf', () => {
 
-  const CADASTRO_URL = 'http://127.0.0.1:3000/e2e/cadastro.html';
+  const CADASTRO_URL = 'http://127.0.0.1:3000/cypress/e2e/cadastro.html';
   const REDIRECT_URL = 'cadastro.html';
 
   beforeEach(() => {
@@ -47,6 +47,7 @@ describe('Testes da Página de Cadastro FireLeaf', () => {
   // --------------------------------------------------------------------
   it('Teste no link para a pagina de login', () => {
     cy.get('.link-login').click();
+    cy.visit('http://127.0.0.1:3000/cypress/e2e/cadastro.html')
   });
 
 

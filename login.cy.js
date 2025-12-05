@@ -1,6 +1,6 @@
 describe('Testes da Página de Login FireLeaf', () => {
 
-  const LOGIN_URL = 'http://127.0.0.1:3000/e2e/login.html';
+  const LOGIN_URL = 'http://127.0.0.1:3000/cypress/e2e/login.html';
   const REDIRECT_URL = 'login.html';
 
   beforeEach(() => {
