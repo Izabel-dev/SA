@@ -223,15 +223,5 @@ Os testes E2E escritos utilizando Cypress garantem:
 ✔ Interface consistente, acessível e funcional
 ✔ Redirecionamentos e links testados em todas as páginas
 
-A aplicação está totalmente mapeada e protegida contra comportamentos inesperados.
-
-
-
-
-
-Criar Page Objects para melhorar a manutenção
-
-Reescrever e organizar o código Cypress
-
-Gerar um relatório visual de execução (Allure Reports)
+A aplicação está totalmente mapeada e protegida contra comportamentos inesperado
 
